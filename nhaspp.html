@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = prompt("Nhập chuỗi số nguyên có 5 chữ số");
+            let number = n.split("");
+            number.sort(function (a, b) {
+                return a - b;
+            });
+
+            let uniqueNumbers = [];
+            let numberCount = {};
+
+            for (let i = 0; i < number.length; i++) {
+                if (numberCount[number[i]]) {
+                    numberCount[number[i]]++;
+                } else {
+                    numberCount[number[i]] = 1;
+                    uniqueNumbers.push(number[i]);
+                }
+            }
+
+            console.log(uniqueNumbers);
+    </script>
+</body>
+</html>

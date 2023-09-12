@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let text = prompt("Nhập chuỗi bất kỳ");
+            let newString = "";
+            let newText = "";
+
+            for (let i = 0; i < text.length; i++) {
+                if (text[i] !== " ") {
+                    newText += text[i];
+                } else {
+                    newString += newText.split("").reverse().join("") + " ";
+                    newText = "";
+                }
+            }
+
+            newString += newText.split("").reverse().join("");
+            console.log(newString);
+
+    </script>
+</body>
+</html>
